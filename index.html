@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <div id="left">
+        <img id="background-img" src="/images/background-img.jpg">
+        <div id="banner">
+            <img id="odin-logo" src="/images/odin-lined.png">
+            <h1>ODIN</h1>
+        </div>
+    </div>
+    <div id="right">
+        <div class="preText left-align">
+            <p class="">This is not a real online service! Lorem ipsum dolor sit amet <em>consectetur</em>, adipisicing elit. Necessitatibus, commodi! <br> Sign up <em>now</em> to get started.</p>
+            <br>
+            <p>...you <em>know</em> you want to.</p>
+        </div>
+        <div id="form-container">
+            <p class="formText">Let's do this!</p>
+                <form action="#" method="post">
+                    <div id="form">
+                        <div class="form-item">
+                            <label for="firstName">FIRST NAME</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Tom" required>
+                        </div>
+                        
+                        <div class="form-item">
+                            <label for="lastName">LAST NAME</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Foolery" required>
+                        </div>
+                        
+                        <div class="form-item">
+                            <label for="userEmail">EMAIL ADDRESS</label>
+                            <input type="email" id="userEmail" name="email" placeholder="tom@myspace.com">
+                        </div>
+                        
+                        <div class="form-item">
+                            <label for="userTelephone">TELEPHONE</label>
+                            <input type="tel" id="userTelephone" name="telephone" placeholder="555-646-4332">
+                        </div>
+                        
+                        <div class="form-item">
+                            <label for="userPassword">PASSWORD</label>
+                            <input type="password" id="userPassword" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" onfocus="showMessage()" onblur="hideMessage()" onkeyup="updateMessage()">
+                            <div id="showPassword">
+                                <input type="checkbox" id="showPw" name="showPw" value="ShowPw" onclick="showPass()">
+                                <label for="showPw">Show Password</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-item">
+                            <label for="userPasswordConf">CONFIRM PASSWORD</label>
+                            <input type="password" id="userPasswordConf" name="passwordConf" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" onfocus="showMatchMessage()" onblur="hideMatchMessage()" onkeyup="matchPw()">
+                            <span id="pwMatch"></span>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="message">
+                    <p>Password must contain the following:</p>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+        </div>
+                
+        <div class="left-align">
+            <button type="submit" class="btn" id="createbtn">CREATE ACCOUNT</button>
+            <div id="login">
+                <p>Already have an account?</p>
+                <a href="#">Log in</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
